@@ -1,0 +1,38 @@
+.listItem{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    transition:all 300ms linear;
+    margin-left: 45px;
+    color: white;
+    margin-top: 12px;
+}
+
+
+.listItem:hover{
+    background-color: #fc6101;
+    color: 'white';
+    border-radius: 30px 0px 0px 30px;
+}
+
+
+.listItem img{
+    width: 14px;
+    padding: 0px 20px;
+}
+img:hover{
+color: #f97316;
+}    
+
+.listItem *{
+    cursor: pointer;
+}
+
+.listItem p{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+
+

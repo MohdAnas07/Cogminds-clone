@@ -1,0 +1,35 @@
+.side-var{
+    width: 20vw;
+    background-color: #00273e;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+.side-var:hover{
+    /* left:0px */
+}
+
+.company-logo{
+    width: 20vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-logo p{
+    margin-left: 35px;
+    padding-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    /* display: none; */
+    transition: all 1s linear;
+}
+.company-logo p:hover{
+    color: #f97316;
+}
+
+.company-logo img{
+            width: 175px;
+            height: 78px;
+}

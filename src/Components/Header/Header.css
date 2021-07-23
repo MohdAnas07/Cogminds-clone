@@ -1,0 +1,95 @@
+.root{
+   --height-img : 40px; 
+   --width-img : 40px; 
+}
+
+.nav{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5px;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow:0px 2px 3px #e2e2e2;
+}
+
+.left-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    background-color: #f6f9fa;
+    height: 22px;
+    border-radius: 15px;
+    /* flex: 1 1;
+    flex-direction: row; */
+    margin-left: 1rem;
+    padding: 1rem 0 1rem 0.3rem;
+    width: 48vw;
+    border: none;
+}
+
+.left-nav input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 50vw;
+    background: none;
+}
+
+.left-nav img{
+    fill: currentColor;
+width: 1em;
+height: 1em;
+display: inline-block;
+font-size: 1.5rem;
+transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+flex-shrink: 0;
+}
+
+.right-nav{
+    display: flex;
+}
+
+
+.notification, .user, .cash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.cash *{
+    margin: 0px 5px;
+}
+.user *{
+    margin: 0px 2px;
+}
+.font-bold{
+    font-weight: bold;
+}
+.notification *{
+    margin: 0px 5px;
+}
+
+.user img{
+    border-radius: 50%;
+    height: var(--height-img );
+    margin: 17px 17px 17px 0;
+    width: var(--width-img );
+}
+
+.notification{
+    position: relative;
+}
+.bell-icon-count{
+    position: absolute;
+    top: 15px;
+    background-color: #f97316;
+    border-radius: 100%;
+    width: 20px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    left: 12px;
+}
