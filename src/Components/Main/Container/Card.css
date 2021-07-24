@@ -1,5 +1,7 @@
 .card-container{
     position: relative;
+    width: 250px;
+    box-sizing: border-box;
 }
 .card-container p{
     text-align: center;

@@ -4,11 +4,11 @@
 }
 
 .nav{
-    width: 80vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 5px;
+    padding: 0px 0px;
     border-bottom: 1px solid #e6e6e6;
     box-shadow: 2px 0 10px rgba(0,0,0,.8);
     overflow: hidden;
@@ -55,6 +55,7 @@
     margin-left: 8px;
     margin-right: 24px;
 }
+
 
 .right-nav{
     display: flex;
@@ -103,3 +104,28 @@
     justify-content: center;
     left: 12px;
 }
+
+/* RESPONSIVNESS */
+
+@media screen and (max-width: 1230px){
+    .nav{
+        padding: 15px 0px;
+    }
+    .user{
+        display: none;
+    }
+    .bell-icon-count{
+        top:-13px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .left-nav{
+        background: none;
+    }
+    .left-nav input{
+        display: none;
+    }
+
+}
+    

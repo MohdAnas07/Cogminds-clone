@@ -6,7 +6,7 @@ import AngryBird1 from '../../assests/angryBird1.png'
 import AngryBird2 from '../../assests/angryBird2.png'
 import AngryBird3 from '../../assests/angryBird3.png'
 
-const angryBirds = [[AngryBird1, 'Angry Bird-1'], [AngryBird2, 'Holi Maskoid'], [AngryBird3, 'Angry Bird-family'], [AngryBird1, 'Angry Bird-1'], [AngryBird2, 'Holi Maskoid'], [AngryBird2, 'Holi Maskoid'], [AngryBird1, 'Angry Bird-1'], [AngryBird2, 'Holi Maskoid'], [AngryBird3, 'Angry Bird-family']]
+const angryBirds = [[AngryBird1, 'Angry Bird-1'], [AngryBird2, 'Holi Maskoid'], [AngryBird3, 'Angry Bird-family'], [AngryBird1, 'Angry Bird-1'], [AngryBird2, 'Holi Maskoid'], [AngryBird2, 'Holi Maskoid'], [AngryBird1, 'Angry Bird-1'], [AngryBird2, 'Holi Maskoid'], [AngryBird3, 'Angry Bird-family'], [AngryBird2, 'Holi Maskoid']]
 
 const Container = () => {
     return (
@@ -26,7 +26,6 @@ const Container = () => {
             </div>
 
             <div className="container-img">
-
                 {
                     angryBirds.map((img, i) => (
                         <Card img={img} />
