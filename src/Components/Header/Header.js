@@ -11,7 +11,7 @@ const Header = () => {
         <div className='nav'>
             <div className="left-nav">
                 <img src={search} alt="search logo" />
-                <input type="text" />
+                <input type="text" placeholder='Enter Product or Keyword...' />
             </div>
             <div className="right-nav">
                 <div className="notification">
