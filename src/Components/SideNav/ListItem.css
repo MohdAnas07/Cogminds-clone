@@ -3,7 +3,7 @@
     /* justify-content: center; */
     align-items: center;
     transition:all 300ms linear;
-    margin-left: 45px;
+    margin-left: 34px;
     color: white;
     margin-top: 12px;
 }
@@ -18,7 +18,7 @@
 
 .listItem img{
     width: 14px;
-    padding: 0px 20px;
+    padding: 0px 10px 0px 20px;
 }
 img:hover{
 color: #f97316;
@@ -31,6 +31,7 @@ color: #f97316;
 .listItem p{
     margin-left: 10px;
     font-weight: bold;
+    flex-shrink: 10;
 }
 
 

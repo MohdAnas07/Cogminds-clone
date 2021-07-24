@@ -4,10 +4,13 @@
     height: 100vh;
     position: sticky;
     top: 0;
+    transition: all 500ms linear;
+    z-index: 500px;
 }
-.side-var:hover{
-    /* left:0px */
-}
+
+/* .side-var:hover{
+    width: 20vw;
+} */
 
 .company-logo{
     width: 20vw;

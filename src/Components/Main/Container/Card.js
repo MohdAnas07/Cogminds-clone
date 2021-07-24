@@ -9,8 +9,14 @@ const Card = ({ img }) => {
         <div className='card-container'>
             <img src={img[0]} alt="" />
             <div className='card' >
-                <img src={Eye} alt="" />
-                <img src={Bin} alt="" />
+                <div className="icon-hover">
+                    <div></div>
+                    <img src={Eye} alt="" />
+                </div>
+                <div className="icon-hover">
+                    <div></div>
+                    <img src={Bin} alt="" />
+                </div>
             </div>
             <p> {img[1]} </p>
         </div>

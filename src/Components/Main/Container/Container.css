@@ -1,12 +1,13 @@
 .container{
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
 .container-header{
     display: flex;
     justify-content: space-between;
+    margin: 12px 0px;
 }
 .right-container-header{
     display: flex;
