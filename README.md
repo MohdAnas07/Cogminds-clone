@@ -1,1 +1,1 @@
-site deployed on heroku : https://cogminds-clone.herokuapp.com/
+site deployed on Heroku : https://cogminds-clone.herokuapp.com/
