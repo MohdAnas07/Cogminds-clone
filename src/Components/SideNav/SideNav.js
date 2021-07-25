@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './SideNav.css'
 import Logo from '../assests/company_logo.png'
 import Image from '../assests/image.png'
@@ -17,12 +17,16 @@ const styleNav = {
 
 const imgIcon = [['Dashboard', Dashboard, {}], ['Image Library', Image, styleNav], ['New Order', Neworder, {}], ['Manage Order', Manageorder, {}], ['Setting', Setting, {}], ['Billing', Billing, {}]]
 
+
+
 const SideNav = () => {
+
+
     return (
         <div className='side-var'>
             <div className='company-logo'>
                 <img src={Logo} alt="company logo" />
-                <p>X</p>
+                <p >X</p>
             </div >
             {
                 imgIcon.map((img, index) => (
@@ -34,3 +38,9 @@ const SideNav = () => {
 }
 
 export default SideNav
+
+
+// const [showSlide, setShowSlide] = useState({})
+// const hideNave = () => {
+//     setShowSlide({ width: '0vw' })
+// }

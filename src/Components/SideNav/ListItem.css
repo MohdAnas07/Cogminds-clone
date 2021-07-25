@@ -18,7 +18,7 @@
 
 .listItem img{
     width: 14px;
-    padding: 0px 10px 0px 20px;
+    padding: 0px 15px 0px 20px;
 }
 img:hover{
 color: #f97316;
@@ -29,9 +29,13 @@ color: #f97316;
 }
 
 .listItem p{
+    -webkit-transform-origin: left;
     margin-left: 10px;
     font-weight: bold;
     flex-shrink: 10;
+    overflow: hidden;
+    transform-origin: left;
+    transition: all .2s linear;
 }
 
 

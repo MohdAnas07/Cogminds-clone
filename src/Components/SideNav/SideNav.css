@@ -1,19 +1,25 @@
 .side-var{
-    width: 18vw;
+    position: absolute;
+    top: 0;
+    z-index: 2000;
+    overflow: hidden;
+    width: 90px;
     background-color: #00273e;
     height: 100vh;
-    position: sticky;
+    position: fixed;
     top: 0;
-    transition: all 500ms linear;
+    transition: all 250ms linear;
     z-index: 500px;
+    border-radius: 0px 13px 13px 0px;
 }
 
-/* .side-var:hover{
-    width: 20vw;
-} */
+
+.side-var:hover{
+    width: 288px;
+}
 
 .company-logo{
-    width: 18vw;
+    width: 288px;
     height: 20vh;
     display: flex;
     justify-content: center;
@@ -25,14 +31,27 @@
     padding-bottom: 20px;
     color: white;
     cursor: pointer;
-    /* display: none; */
     transition: all 1s linear;
+    font-size: 25px;
 }
+
 .company-logo p:hover{
     color: #f97316;
 }
 
 .company-logo img{
-            width: 175px;
-            height: 78px;
+    width: 175px;
+    height: 78px;
+    margin: 2rem 1rem;
 }
+
+
+/* @media screen and (max-width: 1400px) {
+    
+    .side-var{
+        display: none;
+    }
+  
+  } */
+
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Main.css'
 import Container from './Container/Container'
-import Header from '../Header/Header'
+import Header from './Header/Header'
 
 const Main = () => {
     return (

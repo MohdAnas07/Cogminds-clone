@@ -1,13 +1,16 @@
 .container{
     display: flex;
     flex-direction: column;
-    padding: 15px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 20px 10px 105px;
 }
 
 .container-header{
     display: flex;
     justify-content: space-between;
     margin: 20px 0px;
+
 }
 
 .container-img{
@@ -103,6 +106,7 @@
         margin-left: 0px;
     }
   }
+  
 
 @media screen and (max-width: 2600px) {
     .container-img{
