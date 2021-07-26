@@ -20,13 +20,22 @@ const imgIcon = [['Dashboard', Dashboard, {}], ['Image Library', Image, styleNav
 
 
 const SideNav = () => {
+    const [showSlide, setShowSlide] = useState({})
+    console.log(showSlide);
 
+    const hoverIn = () => {
+        setShowSlide({ width: '288px' })
+    }
+
+    const hoverOut = () => {
+        setShowSlide({ width: '90px' })
+    }
 
     return (
-        <div className='side-var'>
+        <div onMouseOver={hoverIn} onMouseOut={hoverOut} style={showSlide} className='side-var'>
             <div className='company-logo'>
                 <img src={Logo} alt="company logo" />
-                <p >X</p>
+                <p onClick={() => setShowSlide({ width: '90px' })}>X</p>
             </div >
             {
                 imgIcon.map((img, index) => (
@@ -40,7 +49,3 @@ const SideNav = () => {
 export default SideNav
 
 
-// const [showSlide, setShowSlide] = useState({})
-// const hideNave = () => {
-//     setShowSlide({ width: '0vw' })
-// }
