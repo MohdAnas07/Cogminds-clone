@@ -13,7 +13,7 @@ const Container = () => {
         <div className='container'>
             <div className='container-header'>
                 <div className="left-container-header">
-                    <h2>IMAGE LIBRARY</h2>
+                    <h1>IMAGE LIBRARY</h1>
                 </div>
                 <div className="right-container-header">
                     <a href="#">Important guidelines to read before uploading</a>

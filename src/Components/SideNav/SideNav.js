@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './SideNav.css'
 import Logo from '../assests/company_logo.png'
 import Image from '../assests/image.png'
@@ -15,31 +15,35 @@ const styleNav = {
     'border-radius': '30px 0px 0px 30px'
 }
 
-const imgIcon = [['Dashboard', Dashboard, {}], ['Image Library', Image, styleNav], ['New Order', Neworder, {}], ['Manage Order', Manageorder, {}], ['Setting', Setting, {}], ['Billing', Billing, {}]]
-
-
 
 const SideNav = () => {
+
     const [showSlide, setShowSlide] = useState({})
-    console.log(showSlide);
+    const [transform, setTransform] = useState({ transform: 'scale(0)' })
+
+    const ListData = [['Dashboard', Dashboard, {}, transform], ['Image Library', Image, styleNav, transform], ['New Order', Neworder, {}, transform], ['Manage Order', Manageorder, {}, transform], ['Setting', Setting, {}, transform], ['Billing', Billing, {}, transform]]
 
     const hoverIn = () => {
         setShowSlide({ width: '288px' })
+        setTransform({ transform: 'scale(1)' })
     }
 
     const hoverOut = () => {
         setShowSlide({ width: '90px' })
+        setTransform({ transform: 'scale(0)' })
     }
+
 
     return (
         <div onMouseOver={hoverIn} onMouseOut={hoverOut} style={showSlide} className='side-var'>
             <div className='company-logo'>
-                <img src={Logo} alt="company logo" />
+                <img src={Logo} alt="company logo" id='logo' />
+
                 <p onClick={() => setShowSlide({ width: '90px' })}>X</p>
             </div >
             {
-                imgIcon.map((img, index) => (
-                    <ListItem key={index} img={img} />
+                ListData.map((data, index) => (
+                    <ListItem key={index} data={data} />
                 ))
             }
         </div>

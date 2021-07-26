@@ -17,6 +17,14 @@
     display: grid;
 }
 
+.left-container-header{
+    color: #00273e;
+}
+
+.left-container-header h2{
+    margin: 0;
+}
+
 .right-container-header{
     display: flex;
     /* justify-content: center; */
@@ -24,15 +32,16 @@
 }
 .right-container-header a{
     text-decoration: none;
-    color: black;
+    color: #00273e;
     cursor: pointer;
     margin-right: 15px;
     transition: all 300ms linear;
+    font-size: 17px;
 }
+
 .right-container-header a:hover{
     color: #fc6101;
 }
-
 
 .upload-btn{
     display: flex;
