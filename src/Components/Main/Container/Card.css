@@ -59,11 +59,19 @@
 }
 
 .icon-hover img{
-    width: 27px;
-    height: 22px;
     cursor: pointer;
     z-index: 5;
     opacity: 1;
+}
+
+.icon-hover .eye{
+    width: 34px;
+    height: 25px;
+}
+
+.icon-hover .bin{
+    width: 26px;
+    height: 32px;
 }
 
 

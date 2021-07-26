@@ -11,11 +11,11 @@ const Card = ({ img }) => {
             <div className='card' >
                 <div className="icon-hover">
                     <div></div>
-                    <img src={Eye} alt="" />
+                    <img className='eye' src={Eye} alt="" />
                 </div>
                 <div className="icon-hover">
                     <div></div>
-                    <img src={Bin} alt="" />
+                    <img className='bin' src={Bin} alt="" />
                 </div>
             </div>
             <p> {img[1]} </p>
