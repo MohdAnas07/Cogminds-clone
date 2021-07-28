@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './SideNav.css'
-import Logo from '../assests/company_logo.png'
-import Image from '../assests/image.png'
-import Dashboard from '../assests/Dashboard.png'
-import Billing from '../assests/billing.png'
-import Setting from '../assests/setting.png'
-import Neworder from '../assests/neworder.png'
-import Manageorder from '../assests/orderlist.png'
+import Logo from '../Components/assests/company_logo.png'
+import Image from '../Components/assests/image.png'
+import Dashboard from '../Components/assests/Dashboard.png'
+import Billing from '../Components/assests/billing.png'
+import Setting from '../Components/assests/setting.png'
+import Neworder from '../Components/assests/neworder.png'
+import Manageorder from '../Components/assests/orderlist.png'
 import ListItem from './ListItem'
+import { Link } from 'react-router-dom'
 
 const styleNav = {
     'background-color': '#fc6101',
@@ -15,13 +16,12 @@ const styleNav = {
     'border-radius': '30px 0px 0px 30px'
 }
 
-
 const SideNav = () => {
 
     const [showSlide, setShowSlide] = useState({})
     const [transform, setTransform] = useState({ transform: 'scale(0)' })
 
-    const ListData = [['Dashboard', Dashboard, {}, transform], ['Image Library', Image, styleNav, transform], ['New Order', Neworder, {}, transform], ['Manage Order', Manageorder, {}, transform], ['Setting', Setting, {}, transform], ['Billing', Billing, {}, transform]]
+    const ListData = [['Dashboard', Dashboard, {}, transform, '/'], ['Image Library', Image, {}, transform, '/imagelibrary'], ['New Order', Neworder, styleNav, transform, '/neworder'], ['Manage Order', Manageorder, {}, transform, '/manageorder'], ['Setting', Setting, {}, transform, '/setting'], ['Billing', Billing, {}, transform, '/billing']]
 
     const hoverIn = () => {
         setShowSlide({ width: '288px' })
@@ -33,7 +33,6 @@ const SideNav = () => {
         setTransform({ transform: 'scale(0)' })
     }
 
-
     return (
         <div onMouseOver={hoverIn} onMouseOut={hoverOut} style={showSlide} className='side-var'>
             <div className='company-logo'>
@@ -43,7 +42,9 @@ const SideNav = () => {
             </div >
             {
                 ListData.map((data, index) => (
-                    <ListItem key={index} data={data} />
+                    // <Link to={data[4]}>
+                    <ListItem key={index} data={data} onClick={() => console.log(index)} />
+                    // </Link>
                 ))
             }
         </div>

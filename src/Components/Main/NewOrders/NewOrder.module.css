@@ -1,0 +1,481 @@
+:root{
+    --primary-color:#fc6101;
+    --secondary-color:rgb(220, 220, 220);
+
+}
+
+.orders{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: rgb(238, 238, 238);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.ordersContainer{
+    display: flex;  
+    flex-direction: column;
+    /* height: 90vh; */
+    width: 87vw;
+    background-color: white;
+    border-radius: 10px;
+    margin: 15px 34px 10px 124px;
+    box-shadow: 10px 10px 20px #cacaca, -10px -10px 20px #cacaca;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+}
+
+.leftRIght{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.uperBorder{
+    /* height: 50px; */
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;    
+    padding: 15px 0;
+    
+}
+.uperBorder span{
+    font-weight: 500px;
+    margin: 0px 15px;
+    
+}
+
+.containerLeft{
+    width: 30%;
+    /* border: 1px solid ; */
+}
+
+.containerLeft>p{
+    margin: 0;
+    font-weight: bold;
+}
+
+.containerLeft h2{
+    margin-top: 0;
+}
+
+h2>span{
+    color: var(--primary-color);
+}
+
+
+
+
+/* COLOR - SIZE COntainer -Style ------------------------ */
+
+
+.colorDiv, .sizeDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+.colorDiv p, .sizeDiv p{
+        margin: 0;
+        font-weight: bold;
+}
+.sizeInnerDiv{
+    display: flex;
+    width: 62%;
+    justify-content: space-between;
+    align-items: center;
+}
+.sizeInnerDiv a{
+    font-size: 13px;
+    color: var(--primary-color);
+}
+
+.colorBox{
+    display: flex;
+}
+
+.sizeBox{
+    display: flex;
+}
+
+.box{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border: 1px solid;
+    margin: 5px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+.boxRed{
+    background-color: red;
+}
+
+.boxGreen{
+    background-color: green;
+}
+.boxBlack{
+    background-color: black;
+}
+.boxOrange{
+    background-color: orangered;
+}
+.boxYellow{
+    background-color: yellow;
+}
+.boxBlue{
+    background-color: blue;
+}
+
+.boxPink{
+    background-color: pink;
+}
+
+.boxSkyBlue{
+    background-color: rgb(0, 175, 245);
+}
+.boxDarkBlue{
+    background-color: rgb(0, 0, 39);
+}
+.boxDarkGray{
+    background-color: rgb(87, 87, 87);
+}
+
+/* IN STOCK ------------------------------------------>>>>> */
+
+.inStock{
+    background-color: var(--secondary-color);
+    padding: 7px;
+    border-radius: 17px;
+    width: 85px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Radion button for type of T-shirt */
+
+
+
+.TshirtType{
+    margin: 18px 0;
+}
+.TshirtType input{
+    width: 18px;
+    height: 18px;
+    background-color: var(--primary-color);
+}
+.TshirtType label{
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+
+/* Uploaded Design COntainer */
+
+.DesignImage{
+    display: flex;
+    flex-direction: column; 
+ }
+
+.uploadedDesign{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 60%; */
+    position: relative;
+
+}
+
+.uploadedDesign img{
+    width: 88px;
+    height: 88px;
+    border-radius: 18px;
+}
+
+.uploadedDesign input{
+    width: 120px;
+    opacity: 0;
+    background: none;
+    border: none;
+    z-index: 2;
+}
+
+.uploadedDesign p{
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    left: 172px;
+    color: var(--primary-color);
+}
+
+
+
+.uploadedDesign .DeleteImg{
+    width: 23px;
+    height: 30px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 200ms linear;
+    box-sizing:  border-box;
+}
+
+.DeleteImg:hover{
+    box-shadow: 10px 10px 20px gainsboro;
+}
+
+
+
+/* =----------------------------------------------------- */
+
+.designWidth, .designPosition, .designAginment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+.designWidth p, .designPosition p, .designAginment p{
+    font-weight: bold;
+}
+
+.size{
+    display: flex;
+
+
+}
+.sizeInputBox{
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--secondary-color);
+    position: relative;
+    padding: 17px 8px;
+    border-radius: 10px;
+    margin: 0px 6px;
+}
+
+.sizeInputBox p{
+    position: absolute;
+    top: 10px;
+    background-color: white;
+    position: absolute;
+    top: -27px;
+    left: 14px;
+    margin: 16px 5px;
+    padding: 0 8px;
+    font-weight: normal;
+}
+
+.sizeInputBox input{
+    width: 105px;
+    margin: 0px 5px;
+    height: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.alignmentImage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-left: 10px; */
+}
+
+.alignmentImage img{
+    margin: 0px 10px;
+}
+
+
+/* =================================================== */
+
+.uploadBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fc6101;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 693;
+    outline: none;
+    padding: 0px 38px;
+    transition: all .1s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+.uploadBtn:hover{
+    background-color: #c74c00;
+}
+
+.uploadBtn input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.uploadBtn img{
+    height: 16px;
+    margin-right: 10px;
+}
+.uploadBtn input{
+    border: none;
+    background-color: none;
+}
+
+.fileInput{
+    visibility: hidden;
+    display: none;
+}
+
+
+
+/* ============ Right Container CSS ==================================== */
+
+.containerRIght{
+    width: 40%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.shirtPosition{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.shirtPosition p{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 2px 68px 10px 68px;
+    margin: 0 0 30px 0;
+    border-bottom: 1px solid;
+}
+
+.tshirtImage{
+    position: relative;
+}
+
+.print{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    left: 146px;
+    height: 180px;
+    width: 153px;
+    background-color: #d7d5d5;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tshirtImage img{
+    width: 450px;
+    height: 500px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proceedBack{
+    display: flex;
+}
+
+.proceedBack button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 693;
+    outline: none;
+    padding: 15px 33px;
+    margin: 0px 10px;
+    transition: all .1s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+.btnBack{
+    background-color: rgb(187, 187, 187);
+    color: black;
+    transition: all 500ms ease-in-out;
+}
+
+.btnBack:hover{
+    background-color: rgb(168, 168, 168);
+}
+
+.btnProceed{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btnProceed:hover{
+    background-color: #c74c00;
+}
+
+
+
+
+
+
+
+
+
+/* 
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--primary-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--primary-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+} */
+
+

@@ -23,6 +23,7 @@ const Container = () => {
                         <p>Upload Your Image</p>
                     </button>
                 </div>
+
             </div>
 
             <div className="container-img">
