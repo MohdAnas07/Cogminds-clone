@@ -12,7 +12,7 @@ import align5 from '../../assests/align5.svg'
 import align6 from '../../assests/align6.svg'
 import Tshirt from '../../assests/tshirt.svg'
 import BTshirt from '../../assests/BackTshirt.png'
-import SleevImg from '../../assests/SleevImg.png'
+import SleevImg from '../../assests/SleeveImg.png'
 import Arrow from '../../assests/arrow.svg'
 
 const NewOrders = () => {
