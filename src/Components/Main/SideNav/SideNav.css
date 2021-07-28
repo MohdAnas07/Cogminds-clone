@@ -36,10 +36,10 @@
     font-size: 25px;
 }
 
+
 .company-logo p:hover{
     color: #f97316;
 }
-
 
 .company-logo img{
     width: 175px;
@@ -52,7 +52,6 @@
 
 .listItem{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     transition:all 250ms linear;
     color: white;
@@ -61,13 +60,10 @@
     margin: 24px 0px 24px 34px;
 }
 
-
-
 .listItem:hover{
     background-color: #fc6101;
     color: 'white';
 }
-
 
 .listItem img{
     width: 14px;
@@ -76,7 +72,7 @@
 
 img:hover{
 color: #f97316;
-}    
+}
 
 .listItem *{
     cursor: pointer;
@@ -99,6 +95,18 @@ color: #f97316;
     transform: scale(1);
 }
 
+.navLinks{
+    text-decoration: none;
+}
+
+activeLink:active{
+    color: #fc6101;
+}
+.styleNav{
+    background-color: #fc6101;
+    color: white;
+    border-radius: 30px 0px 0px 30px
+}
 
 
 

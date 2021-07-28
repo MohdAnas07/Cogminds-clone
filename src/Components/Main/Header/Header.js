@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import search from '../../assests/search.png';
 import notification from '../../assests/notification.png';
 import user from '../../assests/user.png';
 import cash from '../../assests/cash.png';
 import './Header.css'
-// import { Sling as Hamburger } from 'hamburger-react'
-// import SideNav from '../../SideNav/SideNav';
 
 const Header = () => {
 
@@ -38,10 +36,4 @@ const Header = () => {
 
 export default Header
 
-
-
-            // {isOpen && <SideNav />}
-            // <Hamburger display={'none'} className='hambuger' toggled={isOpen} toggle={setOpen} />
-                // const [isOpen, setOpen] = useState(false)
-    // const [width, setWidth] = useState('0vw')
 
