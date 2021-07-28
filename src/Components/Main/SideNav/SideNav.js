@@ -34,33 +34,32 @@ const SideNav = () => {
                 <p onClick={() => setShowSlide({ width: '90px' })}>X</p>
             </div >
 
-            <div>
-                <NavLink activeClassName='styleNav' className='navLinks activeLink' key='1' to='/' >
+            <>
+                <NavLink activeClassName='styleNav' className='navLinks' key='1' to='/' >
                     <ListItem data={ListData[0]} />
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className='navLinks activeLink' key='2' to='/imagelibrary' >
+                <NavLink activeClassName='styleNav' className='navLinks' key='2' to='/imagelibrary' >
                     <ListItem data={ListData[1]} />
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className='navLinks activeLink' key='3' to='/neworder' >
+                <NavLink activeClassName='styleNav' className='navLinks' key='3' to='/neworder' >
                     <ListItem data={ListData[2]} />
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className='navLinks activeLink' key='4' to='/manageorder' >
+                <NavLink activeClassName='styleNav' className='navLinks' key='4' to='/manageorder' >
                     <ListItem data={ListData[3]} />
                 </NavLink>
-                <NavLink activeClassName='styleNav' className='navLinks activeLink' key='5' to='/setting' >
+                <NavLink activeClassName='styleNav' className='navLinks' key='5' to='/setting' >
                     <ListItem data={ListData[4]} />
                 </NavLink>
-                <NavLink activeClassName='styleNav' className='navLinks activeLink' key='6' to='/billing' >
+                <NavLink activeClassName='styleNav' className='navLinks' key='6' to='/billing' >
                     <ListItem data={ListData[5]} />
                 </NavLink>
-            </div>
+            </>
 
         </div>
     )
 }
-
 
 export default SideNav
