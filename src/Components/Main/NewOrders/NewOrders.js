@@ -13,6 +13,7 @@ import align6 from '../../assests/align6.svg'
 import Tshirt from '../../assests/tshirt.svg'
 import BTshirt from '../../assests/BackTshirt.png'
 import SleevImg from '../../assests/SleevImg.png'
+import Arrow from '../../assests/arrow.svg'
 
 const NewOrders = () => {
     const [front, setFront] = useState(true)
@@ -81,8 +82,10 @@ const NewOrders = () => {
                             <div className={CSS.DesignImage}>
                                 <div className={CSS.uploadedDesign}>
                                     <img src={image} alt="" />
-                                    <input type="file" />
-                                    <p>Upload Design</p>
+                                    <div className={CSS.chooseFile}>
+                                        <input type="file" />
+                                        <p>Upload Design</p>
+                                    </div>
                                     <img className={CSS.DeleteImg} src={deleteImg} alt="" />
                                 </div>
                                 <div className={CSS.designWidth}>
@@ -151,9 +154,8 @@ const NewOrders = () => {
                                     setBack(false)
                                     setSleev(true)
                                     setPrint(false)
-                                }}>SLEEV</p>
+                                }}>SLEEVE</p>
                             </div>
-
 
                             <div className={CSS.tshirtImage}>
 
@@ -174,7 +176,10 @@ const NewOrders = () => {
                             </button>
                         </div>
                         <div className={CSS.proceedBack}>
-                            <button className={CSS.btnBack}><i class="far fa-long-arrow-left"></i>Back</button>
+                            <button className={CSS.btnBack}>
+                                <img src={Arrow} alt="" />
+                                <p>Back</p>
+                            </button>
                             <button className={CSS.btnProceed}>Proceed</button>
                         </div>
                     </div>

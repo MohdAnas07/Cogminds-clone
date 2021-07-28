@@ -193,7 +193,7 @@ h2>span{
     justify-content: space-between;
     align-items: center;
     /* width: 60%; */
-    position: relative;
+    /* position: relative; */
 
 }
 
@@ -202,23 +202,27 @@ h2>span{
     height: 88px;
     border-radius: 18px;
 }
+.chooseFile{
+    position: relative;
+    width: 120px;
+}
 
-.uploadedDesign input{
+.chooseFile input{
     width: 120px;
     opacity: 0;
     background: none;
     border: none;
     z-index: 2;
+
 }
 
-.uploadedDesign p{
+.chooseFile p{
     cursor: pointer;
     position: absolute;
-    top: 16px;
-    left: 172px;
+    top: -15px;
+    left: 0;
     color: var(--primary-color);
 }
-
 
 
 .uploadedDesign .DeleteImg{
@@ -251,9 +255,8 @@ h2>span{
 
 .size{
     display: flex;
-
-
 }
+
 .sizeInputBox{
     display: flex;
     align-items: center;
@@ -277,7 +280,7 @@ h2>span{
 }
 
 .sizeInputBox input{
-    width: 105px;
+    width: 90px;
     margin: 0px 5px;
     height: 25px;
     border: none;
@@ -298,7 +301,9 @@ h2>span{
 }
 
 
-/* =================================================== */
+
+
+/* ====================== Upload Button at botton  ============================= */
 
 .uploadBtn{
     display: flex;
@@ -368,9 +373,11 @@ h2>span{
     cursor: pointer;
     text-decoration: none;
     color: black;
-    padding: 2px 68px 10px 68px;
+    padding: 2px 0 10px 0px;
     margin: 0 0 30px 0;
     border-bottom: 1px solid;
+    width: 100%;
+    text-align: center;
 }
 
 .tshirtImage{
@@ -400,6 +407,7 @@ h2>span{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 50px;
 }
 
 .proceedBack{
@@ -415,7 +423,6 @@ h2>span{
     cursor: pointer;
     font-weight: 693;
     outline: none;
-    padding: 15px 33px;
     margin: 0px 10px;
     transition: all .1s ease-in-out;
     position: relative;
@@ -426,15 +433,20 @@ h2>span{
     background-color: rgb(187, 187, 187);
     color: black;
     transition: all 500ms ease-in-out;
+    padding: 15px 26px;
 }
 
 .btnBack:hover{
     background-color: rgb(168, 168, 168);
 }
+.btnBack p{
+    margin: 0 5px;
+}
 
 .btnProceed{
     background-color: var(--primary-color);
     color: white;
+    padding: 15px 30px;
 }
 
 .btnProceed:hover{
