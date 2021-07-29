@@ -20,7 +20,23 @@ const NewOrders = () => {
     const [back, setBack] = useState(false)
     const [sleev, setSleev] = useState(false)
     const [print, setPrint] = useState(true)
+    const [tColor, setTColor] = useState({ 'background-color': 'white' })
+    const [tSize, setTSize] = useState({ width: '450px', height: '500px' })
 
+    const [printImg, setPrintImg] = useState(null)
+
+    const [widthsize, setWidthSize] = useState(null)
+    const [heightSize, setHeightSize] = useState(null)
+    const [topPosition, setTopPosition] = useState(null)
+    const [leftPosition, setLeftPosition] = useState(null)
+
+    const [isPrint, setIsPrint] = useState(null)
+
+    // Alignments State 
+
+    const handleImage = (e) => {
+        setPrintImg(URL.createObjectURL(e.target.files[0]))
+    }
 
     return (
         <div className={CSS.orders}>
@@ -40,16 +56,46 @@ const NewOrders = () => {
                             <div className={CSS.colorDiv}>
                                 <p >colors:</p>
                                 <div className={CSS.colorBox}>
-                                    <div className={`${CSS.box} ${CSS.boxBlack}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxRed}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxGreen}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxBlue}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxYellow}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxOrange}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxPink}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxSkyBlue}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxDarkBlue}`}></div>
-                                    <div className={`${CSS.box} ${CSS.boxDarkGray}`}></div>
+                                    <div className={`${CSS.box} ${CSS.boxBlack}`} onClick={() => {
+                                        setTColor({ 'background-color': 'black' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxRed}`} onClick={() => {
+                                        setTColor({ 'background-color': 'red' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxGreen}`} onClick={() => {
+                                        setTColor({ 'background-color': 'green' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxBlue}`} onClick={() => {
+                                        setTColor({ 'background-color': 'blue' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxYellow}`} onClick={(e) => {
+                                        setTColor({ 'background-color': 'yellow' })
+                                    }} ></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxOrange}`} onClick={() => {
+                                        setTColor({ 'background-color': 'orangered' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxPink}`} onClick={() => {
+                                        setTColor({ 'background-color': 'pink' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxSkyBlue}`} onClick={() => {
+                                        setTColor({ 'background-color': 'rgb(0, 175, 245)' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxDarkBlue}`} onClick={() => {
+                                        setTColor({ 'background-color': 'rgb(0, 0, 39)' })
+                                    }}></div>
+
+                                    <div className={`${CSS.box} ${CSS.boxDarkGray}`} onClick={() => {
+                                        setTColor({ 'background-color': 'rgb(87, 87, 87)' })
+                                    }}></div>
+
                                 </div>
                             </div>
 
@@ -59,47 +105,94 @@ const NewOrders = () => {
                                     <a href='#'>Show Size Guide</a>
                                 </div>
                                 <div className={CSS.sizeBox}>
-                                    <div className={`${CSS.box}`}>S</div>
-                                    <div className={`${CSS.box} `}>L</div>
-                                    <div className={`${CSS.box} `}>M</div>
-                                    <div className={`${CSS.box} `}>XL</div>
-                                    <div className={`${CSS.box} `}>2XL</div>
-                                    <div className={`${CSS.box} `}>3XL</div>
-                                    <div className={`${CSS.box} `}>4XL</div>
-                                    <div className={`${CSS.box} `}>5XL</div>
+                                    <div className={`${CSS.box}`}
+                                        onClick={() => {
+                                            setTSize({ width: '250px', height: '300px' })
+                                        }}>S</div>
+                                    <div className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setTSize({ width: '280px', height: '320px' })
+                                        }}>L</div>
+
+                                    <div className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setTSize({ width: '300px', height: '350px' })
+                                        }}>M</div>
+
+                                    <div className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setTSize({ width: '320px', height: '380px' })
+                                        }}>XL</div>
+
+                                    <div className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setTSize({ width: '340px', height: '400px' })
+                                        }}>2XL</div>
+
+                                    <div className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setTSize({ width: '380px', height: '420px' })
+                                        }}>3XL</div>
+
+                                    <div className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setTSize({ width: '410px', height: '460px' })
+                                        }}>4XL</div>
+
+                                    <div className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setTSize({ width: '450px', height: '500px' })
+                                        }}>5XL</div>
                                 </div>
                             </div>
 
                             <p className={CSS.inStock}>In Stock</p>
 
                             <div className={CSS.TshirtType}>
-                                <input type="radio" checked name="key" value="plain" />
-                                <label for="html">Plain</label>
-                                <input type="radio" name="key" value="print" />
-                                <label for="css">Printed</label>
+
+                                <input type="radio" checked name="key" value="plain" onChange={(e) => {
+                                    setIsPrint(e.target.value.toString())
+                                }} />
+                                <label for="plain">Plain</label>
+
+                                <input type="radio" name="key" value="printed" onChange={(e) => {
+                                    setIsPrint(e.target.value.toString())
+                                }} />
+                                <label for="printed">Printed</label>
+
                             </div>
 
                             <div className={CSS.DesignImage}>
                                 <div className={CSS.uploadedDesign}>
-                                    <img src={image} alt="" />
+                                    <img src={printImg} alt="" />
+
                                     <div className={CSS.chooseFile}>
                                         <input type="file" />
                                         <p>Upload Design</p>
                                     </div>
-                                    <img className={CSS.DeleteImg} src={deleteImg} alt="" />
+
+                                    <img className={CSS.DeleteImg} src={deleteImg} alt="" onClick={() => { setPrintImg(null) }} />
+
                                 </div>
+
                                 <div className={CSS.designWidth}>
                                     <p>Size</p>
                                     <div className={CSS.size}>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Width</p>
-                                            <input type="text" placeholder='15.7' />
-                                            <span>In</span>
+                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                                let width = e.target.value
+                                                setWidthSize({ width: `${width}px` })
+                                            }} />
+                                            <span>Px</span>
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Height</p>
-                                            <input type="text" placeholder='15.7' />
-                                            <span>In</span>
+                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                                let height = e.target.value
+                                                setHeightSize({ height: `${height}px` })
+                                            }} />
+                                            <span>Px</span>
                                         </div>
                                     </div>
                                 </div>
@@ -109,26 +202,42 @@ const NewOrders = () => {
                                     <div className={CSS.size}>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Top</p>
-                                            <input type="text" placeholder='15.7' />
-                                            <span>In</span>
+                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                                let position = e.target.value
+                                                setTopPosition({ 'margin-bottom': `${position}px` })
+                                            }} />
+                                            <span>Px</span>
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Left</p>
-                                            <input type="text" placeholder='15.7' />
-                                            <span>In</span>
+                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                                let position = e.target.value
+                                                setLeftPosition({ 'margin-right': `${position}px` })
+
+                                            }} />
+                                            <span>Px</span>
                                         </div>
                                     </div>
                                 </div>
 
+
                                 <div className={CSS.designAginment}>
-                                    <p>Position</p>
+                                    <p>Alignment</p>
                                     <div className={CSS.alignmentImage}>
                                         <img src={align1} alt="" />
                                         <img src={align2} alt="" />
                                         <img src={align3} alt="" />
                                         <img src={align4} alt="" />
-                                        <img src={align5} alt="" />
-                                        <img src={align6} alt="" />
+                                        <img src={align5} alt="" onClick={() => {
+
+                                            // let count = count + 1
+                                            setTopPosition()
+
+                                        }} />
+                                        <img src={align6} alt="" onClick={() => {
+                                            setTopPosition(topPosition - 1)
+                                        }} />
+
                                     </div>
                                 </div>
                             </div>
@@ -159,21 +268,30 @@ const NewOrders = () => {
 
                             <div className={CSS.tshirtImage}>
 
-                                {front && <img src={Tshirt} alt="" />}
-                                {back && <img src={BTshirt} alt="" />}
-                                {sleev && <img src={SleevImg} alt="" />}
-                                {print && <div className={CSS.print}><span>Print your customs design</span></div>}
-                            </div>
+                                {front && <img style={{ ...tColor, ...tSize }} src={Tshirt} alt="" />}
 
+                                {back && <img style={{ ...tColor, ...tSize }} src={BTshirt} alt="" />}
+
+                                {sleev && <img style={{ ...tColor, ...tSize }} src={SleevImg} alt="" />}
+
+                                {print && <div className={CSS.print}><img className={CSS.printImg}
+                                    style={{
+                                        ...widthsize, ...heightSize,
+                                        ...topPosition, ...leftPosition
+                                    }}
+                                    src={printImg} alt="" /></div>}
+                            </div>
                         </div>
                     </div>
                     <div className={CSS.buttons}>
                         <div className={CSS.uploads}>
-                            <button htmlFor="upload" className={CSS.uploadBtn}>
-                                <input type="file" id="upload" />
-                                <img src={image1} alt="" />
-                                <p>Upload Your Image</p>
-                            </button>
+                            {
+                                isPrint === 'printed' ? <button htmlFor="upload" className={CSS.uploadBtn}>
+                                    <input type="file" id="upload" onChange={(e) => handleImage(e)} />
+
+                                    <img src={image1} alt="" />
+                                    <p>Upload Your Image</p>
+                                </button> : <div></div>}
                         </div>
                         <div className={CSS.proceedBack}>
                             <button className={CSS.btnBack}>

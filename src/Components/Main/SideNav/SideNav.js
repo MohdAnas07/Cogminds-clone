@@ -1,62 +1,84 @@
 import React, { useState } from 'react'
 import './SideNav.css'
 import Logo from '../../assests/company_logo.png'
-import Image from '../../assests/image.png'
-import Dashboard from '../../assests/Dashboard.png'
-import Billing from '../../assests/billing.png'
-import Setting from '../../assests/setting.png'
-import Neworder from '../../assests/neworder.png'
-import Manageorder from '../../assests/orderlist.png'
-import ListItem from './ListItem'
 import { NavLink } from 'react-router-dom'
+
+// ICONS 
+import DashboardIcon from '@material-ui/icons/Dashboard'; //dashboard
+import InsertPhotoIcon from '@material-ui/icons/InsertPhoto'; //imagelibry
+import AddBoxIcon from '@material-ui/icons/AddBox';  //new order
+import FileCopyIcon from '@material-ui/icons/FileCopy'; //manageorder
+import TuneIcon from '@material-ui/icons/Tune'; //setting
+import ReceiptIcon from '@material-ui/icons/Receipt'; //billing
+
 
 const SideNav = () => {
 
     const [showSlide, setShowSlide] = useState({})
     const [transform, setTransform] = useState({ transform: 'scale(0)' })
-
-    const ListData = [['Dashboard', Dashboard, transform], ['Image Library', Image, transform], ['New Order', Neworder, transform, '/neworder'], ['Manage Order', Manageorder, transform, '/manageorder'], ['Setting', Setting, transform, '/setting'], ['Billing', Billing, transform, '/billing']]
+    const [marginLeft, setMarginLeft] = useState(null)
 
     const hoverIn = () => {
         setShowSlide({ width: '288px' })
         setTransform({ transform: 'scale(1)' })
+        setMarginLeft({ marginLeft: '34px' })
     }
 
     const hoverOut = () => {
-        setShowSlide({ width: '90px' })
+        setShowSlide({ width: '75px' })
         setTransform({ transform: 'scale(0)' })
+        setMarginLeft({ marginLeft: '8px' })
+
     }
 
     return (
         <div onMouseOver={hoverIn} onMouseOut={hoverOut} style={showSlide} className='side-var'>
             <div className='company-logo'>
                 <img src={Logo} alt="company logo" id='logo' />
-                <p onClick={() => setShowSlide({ width: '90px' })}>X</p>
+                <p onClick={() => setShowSlide({ width: '75px' })}>X</p>
             </div >
 
             <>
-                <NavLink activeClassName='styleNav' className=' listItem' key='1' exact to='/' >
-                    <ListItem data={ListData[0]} />
+                <NavLink style={marginLeft} activeClassName='activeLink' className=' listItem' key='1' exact to='/' >
+                    <b className='uperBox'></b>
+                    <b className='lowerBox'></b>
+                    <DashboardIcon className='Icon' />
+                    <p style={transform} >Dashboard</p>
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className=' listItem' key='2' exact to='/imagelibrary' >
-                    <ListItem data={ListData[1]} />
+                <NavLink style={marginLeft} activeClassName='activeLink' className=' listItem' key='2' exact to='/imagelibrary' >
+                    <b className='uperBox'></b>
+                    <b className='lowerBox'></b>
+                    <InsertPhotoIcon className='Icon' />
+                    <p style={transform} >Image Library</p>
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className=' listItem' key='3' exact to='/neworder' >
-                    <ListItem data={ListData[2]} />
+                <NavLink style={marginLeft} activeClassName='activeLink' className=' listItem' key='3' exact to='/neworder' >
+                    <b className='uperBox'></b>
+                    <b className='lowerBox'></b>
+                    <AddBoxIcon className='Icon' />
+                    <p style={transform} >New Order</p>
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className=' listItem' key='4' exact to='/manageorder' >
-                    <ListItem data={ListData[3]} />
+                <NavLink style={marginLeft} activeClassName='activeLink' className=' listItem' key='4' exact to='/manageorder' >
+                    <b className='uperBox'></b>
+                    <b className='lowerBox'></b>
+                    <FileCopyIcon className='Icon' />
+                    <p style={transform} >Manage Order</p>
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className=' listItem' key='5' exact to='/setting' >
-                    <ListItem data={ListData[4]} />
+                <NavLink style={marginLeft} activeClassName='activeLink' className=' listItem' key='5' exact to='/setting' >
+                    <b className='uperBox'></b>
+                    <b className='lowerBox'></b>
+                    <TuneIcon className='Icon' />
+                    <p style={transform} >Setting</p>
                 </NavLink>
 
-                <NavLink activeClassName='styleNav' className=' listItem' key='6' exact to='/billing' >
-                    <ListItem data={ListData[5]} />
+                <NavLink style={marginLeft} activeClassName='activeLink' className=' listItem' key='6' exact to='/billing' >
+                    <b className='uperBox'></b>
+                    <b className='lowerBox'></b>
+                    <ReceiptIcon className=' Icon' />
+                    <p style={transform} >Billing</p>
                 </NavLink>
             </>
 

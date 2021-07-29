@@ -3,7 +3,7 @@
     top: 0;
     z-index: 2000;
     overflow: hidden;
-    width: 90px;
+    width: 75px;
     background-color: #00273e;
     height: 100vh;
     position: fixed;
@@ -53,23 +53,19 @@
 .listItem{
     display: flex;
     align-items: center;
-    transition:all 250ms linear;
     color: white;
     border-radius: 30px 0px 0px 30px;
     height: 50px;
-    margin: 24px 0px 24px 34px;
+    margin: 37px 0px 37px 8px;
     text-decoration: none;
+    margin-top: 0;
+    position: relative;
 }
 
 .listItem:hover{
-    background-color: #fc6101;
-    color: white;
+    color: #fc6101;
 }
 
-.listItem img{
-    width: 14px;
-    padding: 0px 15px 0px 20px;
-}
 
 img:hover{
 color: #f97316;
@@ -82,7 +78,7 @@ color: #f97316;
 .listItem p{
     -webkit-transform-origin: left;
     margin-left: 10px;
-    font-weight: bold;
+    font-weight: 700;
     flex-shrink: 10;
     overflow: hidden;
     transform-origin: left;
@@ -92,15 +88,71 @@ color: #f97316;
     white-space: nowrap !important;
 }
 
+
 .listItem p:hover{
     transform: scale(1);
 }
 
+.activeLink{
+    background-color: white;
+    color: #00273e;
+}
 
-.styleNav{
-    background-color: #fc6101;
-    color: white;
+.activeLink b{
+    visibility: visible;
+}
+
+.MuiSvgIcon-root {
+    width: 0;
+}
+
+.Icon{
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px 0 24px;
+}
+
+.listItem svg{
+    width: 20px;
+}
+
+.uperBox{
+    width: 10px;
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    height: 20px;
+    background: white;
+    top: -20px;
+    left: 0;
+    visibility: hidden;
+}
+
+.uperBox::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    background: #00273e;
 }
 
 
+.lowerBox{
+    width: 100%;
+    position: absolute;
+    height: 20px;
+    background: white;
+    bottom: -20px;
+    left: 0;
+    visibility: hidden;
+}
 
+.lowerBox::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    background: #00273e;
+}

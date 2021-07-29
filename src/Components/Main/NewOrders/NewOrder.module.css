@@ -298,6 +298,7 @@ h2>span{
 
 .alignmentImage img{
     margin: 0px 10px;
+    cursor: pointer;
 }
 
 
@@ -402,6 +403,13 @@ h2>span{
     width: 450px;
     height: 500px;
 }
+.print img{
+    width: 143px;
+    height: 163px;
+    margin-top: 0;
+    margin-left: 0;
+}
+
 
 .buttons{
     display: flex;
