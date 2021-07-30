@@ -1,6 +1,6 @@
 .card-container{
     position: relative;
-    width: 250px;
+    width: 300px;
     box-sizing: border-box;
 }
 .card-container p{
@@ -10,8 +10,8 @@
 }
 
 .card-container img{
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     box-shadow: 0 4px 15px 0 rgba(0,0,0,.15);
 }
 

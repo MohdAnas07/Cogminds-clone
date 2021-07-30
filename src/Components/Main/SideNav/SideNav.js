@@ -27,7 +27,7 @@ const SideNav = () => {
     const hoverOut = () => {
         setShowSlide({ width: '75px' })
         setTransform({ transform: 'scale(0)' })
-        setMarginLeft({ marginLeft: '8px' })
+        setMarginLeft({ marginLeft: '5px' })
 
     }
 

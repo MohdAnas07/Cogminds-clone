@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import CSS from './NewOrder.module.css'
 // import image from "../../assest/angryBird1.png"
 import image from '../../assests/angryBird2.png'
@@ -13,6 +13,7 @@ import align6 from '../../assests/align6.svg'
 import Tshirt from '../../assests/tshirt.svg'
 import BTshirt from '../../assests/BackTshirt.png'
 import SleevImg from '../../assests/SleeveImg.png'
+// import SleevImg from '../../assests/fullSleeve2.svg'
 import Arrow from '../../assests/arrow.svg'
 
 const NewOrders = () => {
@@ -20,8 +21,8 @@ const NewOrders = () => {
     const [back, setBack] = useState(false)
     const [sleev, setSleev] = useState(false)
     const [print, setPrint] = useState(true)
-    const [tColor, setTColor] = useState({ 'background-color': 'white' })
-    const [tSize, setTSize] = useState({ width: '450px', height: '500px' })
+    const [tColor, setTColor] = useState(null)
+    const [tSize, setTSize] = useState(null)
 
     const [printImg, setPrintImg] = useState(null)
 
@@ -37,6 +38,7 @@ const NewOrders = () => {
     const handleImage = (e) => {
         setPrintImg(URL.createObjectURL(e.target.files[0]))
     }
+
 
     return (
         <div className={CSS.orders}>
@@ -102,47 +104,31 @@ const NewOrders = () => {
                             <div className={CSS.sizeDiv}>
                                 <div className={CSS.sizeInnerDiv}>
                                     <p>Size:</p>
-                                    <a href='#'>Show Size Guide</a>
+                                    <a href=''>Show Size Guide</a>
                                 </div>
                                 <div className={CSS.sizeBox}>
                                     <div className={`${CSS.box}`}
-                                        onClick={() => {
-                                            setTSize({ width: '250px', height: '300px' })
-                                        }}>S</div>
+                                    >S</div>
                                     <div className={`${CSS.box} `}
-                                        onClick={() => {
-                                            setTSize({ width: '280px', height: '320px' })
-                                        }}>L</div>
+                                    >L</div>
 
                                     <div className={`${CSS.box} `}
-                                        onClick={() => {
-                                            setTSize({ width: '300px', height: '350px' })
-                                        }}>M</div>
+                                    >M</div>
 
                                     <div className={`${CSS.box} `}
-                                        onClick={() => {
-                                            setTSize({ width: '320px', height: '380px' })
-                                        }}>XL</div>
+                                    >XL</div>
 
                                     <div className={`${CSS.box} `}
-                                        onClick={() => {
-                                            setTSize({ width: '340px', height: '400px' })
-                                        }}>2XL</div>
+                                    >2XL</div>
 
                                     <div className={`${CSS.box} `}
-                                        onClick={() => {
-                                            setTSize({ width: '380px', height: '420px' })
-                                        }}>3XL</div>
+                                    >3XL</div>
 
                                     <div className={`${CSS.box} `}
-                                        onClick={() => {
-                                            setTSize({ width: '410px', height: '460px' })
-                                        }}>4XL</div>
+                                    >4XL</div>
 
                                     <div className={`${CSS.box} `}
-                                        onClick={() => {
-                                            setTSize({ width: '450px', height: '500px' })
-                                        }}>5XL</div>
+                                    >5XL</div>
                                 </div>
                             </div>
 
@@ -150,12 +136,12 @@ const NewOrders = () => {
 
                             <div className={CSS.TshirtType}>
 
-                                <input type="radio" checked name="key" value="plain" onChange={(e) => {
+                                <input type="radio" checked name="key" value="plain" onClick={(e) => {
                                     setIsPrint(e.target.value.toString())
                                 }} />
                                 <label for="plain">Plain</label>
 
-                                <input type="radio" name="key" value="printed" onChange={(e) => {
+                                <input type="radio" name="key" value="printed" onClick={(e) => {
                                     setIsPrint(e.target.value.toString())
                                 }} />
                                 <label for="printed">Printed</label>
@@ -180,7 +166,7 @@ const NewOrders = () => {
                                     <div className={CSS.size}>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Width</p>
-                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                            <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let width = e.target.value
                                                 setWidthSize({ width: `${width}px` })
                                             }} />
@@ -188,7 +174,7 @@ const NewOrders = () => {
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Height</p>
-                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                            <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let height = e.target.value
                                                 setHeightSize({ height: `${height}px` })
                                             }} />
@@ -202,7 +188,7 @@ const NewOrders = () => {
                                     <div className={CSS.size}>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Top</p>
-                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                            <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let position = e.target.value
                                                 setTopPosition({ 'margin-bottom': `${position}px` })
                                             }} />
@@ -210,7 +196,7 @@ const NewOrders = () => {
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Left</p>
-                                            <input type="text" placeholder='15.7' onChange={(e) => {
+                                            <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let position = e.target.value
                                                 setLeftPosition({ 'margin-right': `${position}px` })
 
@@ -220,7 +206,6 @@ const NewOrders = () => {
                                     </div>
                                 </div>
 
-
                                 <div className={CSS.designAginment}>
                                     <p>Alignment</p>
                                     <div className={CSS.alignmentImage}>
@@ -228,18 +213,13 @@ const NewOrders = () => {
                                         <img src={align2} alt="" />
                                         <img src={align3} alt="" />
                                         <img src={align4} alt="" />
-                                        <img src={align5} alt="" onClick={() => {
-
-                                            // let count = count + 1
-                                            setTopPosition()
-
-                                        }} />
+                                        <img src={align5} alt="" />
                                         <img src={align6} alt="" onClick={() => {
-                                            setTopPosition(topPosition - 1)
+                                            setTopPosition(topPosition)
                                         }} />
-
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
@@ -274,15 +254,17 @@ const NewOrders = () => {
 
                                 {sleev && <img style={{ ...tColor, ...tSize }} src={SleevImg} alt="" />}
 
-                                {print && <div className={CSS.print}><img className={CSS.printImg}
-                                    style={{
-                                        ...widthsize, ...heightSize,
-                                        ...topPosition, ...leftPosition
-                                    }}
-                                    src={printImg} alt="" /></div>}
+                                {print && <div className={CSS.print}>
+                                    <img className={CSS.printImg}
+                                        style={{
+                                            ...widthsize, ...heightSize,
+                                            ...topPosition, ...leftPosition
+                                        }}
+                                        src={printImg} alt="" /></div>}
                             </div>
                         </div>
                     </div>
+
                     <div className={CSS.buttons}>
                         <div className={CSS.uploads}>
                             {
@@ -293,6 +275,7 @@ const NewOrders = () => {
                                     <p>Upload Your Image</p>
                                 </button> : <div></div>}
                         </div>
+
                         <div className={CSS.proceedBack}>
                             <button className={CSS.btnBack}>
                                 <img src={Arrow} alt="" />

@@ -288,7 +288,6 @@ h2>span{
     font-size: 16px;
 }
 
-
 .alignmentImage{
     display: flex;
     justify-content: space-between;
@@ -352,16 +351,12 @@ h2>span{
     display: none;
 }
 
-
-
 /* ============ Right Container CSS ==================================== */
 
 .containerRIght{
     width: 40%;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -370,6 +365,7 @@ h2>span{
     justify-content: space-between;
     width: 100%;
 }
+
 .shirtPosition p{
     cursor: pointer;
     text-decoration: none;
@@ -394,18 +390,19 @@ h2>span{
     left: 146px;
     height: 180px;
     width: 153px;
-    background-color: #d7d5d5;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .tshirtImage img{
-    width: 450px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
 }
+
+
 .print img{
-    width: 143px;
-    height: 163px;
+    width: 90%;
+    height: 90%;
     margin-top: 0;
     margin-left: 0;
 }
@@ -434,7 +431,7 @@ h2>span{
     margin: 0px 10px;
     transition: all .1s ease-in-out;
     position: relative;
-    font-size: 15px;
+    /* font-size: 15px; */
 }
 
 .btnBack{
@@ -465,37 +462,290 @@ h2>span{
 
 
 
+/* Media Querries =---------------------------------------------- */
+
+@media screen and (max-width: 2600px) {
+    .proceedBack button{
+        font-size: 15px;
+    }
+
+    
+  }
 
 
+@media screen and (max-width: 1559px) {
+    .containerLeft{
+        width: 31%;
+    }
 
+    .print{
+        top: 18%;
+        left: 32%;
+        height: 40%;
+        width: 35%;
+    }
 
-/* 
-input[type='radio']:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: var(--primary-color);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
 }
 
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: var(--primary-color);
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-} */
+
+@media screen and (max-width: 1472px) {
+    .containerLeft{
+        width: 33%;
+    }
+  }
+
+@media screen and (max-width: 1388px) {
+
+    .containerLeft{
+        width: 35%;
+    }
+  }
+
+
+@media screen and (max-width: 1351px) {
+    .containerLeft{
+        width: 37%;
+    }
+  }
+    
+
+@media screen and (max-width: 1282px) {
+    .containerLeft{
+        width: 40%;
+    }
+
+    .print{
+        top: 83px;
+        left: 137px;
+        height: 191px;
+        width: 153px;
+    }
+
+  }
+
+
+@media screen and (max-width: 1196px) {
+    .containerLeft{
+        width: 44%;
+    }
+
+    .tshirtImage img{
+        width: 390px;
+        height: 400px;
+    }
+
+    .print{
+        top: 86px;
+        left: 117px;
+        height: 188px;
+        width: 153px;
+        }
+
+        .print img{
+            width: 90%;
+            height: 90%;
+        }
+
+        .designPosition{
+            margin : 30px 0 20px 0
+        }
+        .designWidth{
+            margin : 30px 0 20px 0
+        }
+  }
+
+@media screen and (max-width: 1105px) {
+    .containerLeft{
+        width: 48%;
+    }
+
+    .tshirtImage img{
+        width: 356px;
+        height: 370px;
+    }
+
+    .print{
+        top: 68px;
+        left: 104px;
+        height: 163px;
+        width: 145px;
+        }
+    .print img{
+        width: 90%;
+        height: 90%;
+
+    }
+
+  }
+
+
+@media screen and (max-width :1032px){
+
+    .leftRIght{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerLeft{
+        width: 70%;
+    }
+
+    .containerLeft{
+        margin-bottom: 30px;
+    }
+
+    .containerRIght{
+        width: 70%;
+    }
+
+    .shirtPosition p{
+        border-bottom: 2px solid;;
+    }
+
+    .tshirtImage{
+        width: 80%;
+        /* height: 80%; */
+    }
+
+    .tshirtImage img{
+        width: 100%;
+        height: 80%;
+    }
+
+    .print{
+        top: 10%;
+        left: 32%;
+        height: 40%;
+        width: 34%;
+    }
+
+    .proceedBack{
+        font-size: 14px;
+    }
+
+    .uploadBtn{
+        font-size: 14px;
+        padding: 0px 11px;
+    }
+    .uploadBtn img{
+        height: 12px;
+    }
+    .btnBack{
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    .btnProceed{
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    .proceedBack button{
+        font-size: 14px;
+        margin: 0px 8px;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+    .containerLeft{
+        width: 80%;
+    }
+    .containerRIght{
+        width: 80%;
+    }
+
+    .uploadBtn{
+        font-size: 12px;
+        padding: 0px 11px;
+    }
+    .uploadBtn img{
+        height: 10px;
+    }
+    .btnBack{
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    .btnProceed{
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .proceedBack button{
+        font-size: 12px;
+        margin: 0px 6px;
+        padding: 10px 8px;
+    }
+    .btnBack img{
+        width: 18px;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .containerLeft{
+        width: 90%;
+    }     
+    .containerRIght{
+        width: 90%;
+    }
+
+    
+    .uploadBtn{
+        font-size: 10px;
+        padding: 0px 9px;
+    }
+    .uploadBtn img{
+        height: 8px;
+    }
+    .btnBack{
+        font-size: 8px;
+        padding: 7px 10px;
+    }
+    .btnProceed{
+        font-size: 8px;
+        padding: 7px 10px;
+    }
+
+    .proceedBack button{
+        font-size: 12px;
+        margin: 0px 5px;
+        padding: 10px 6px;
+    }
+}
+
+
+@media screen and (max-width:660px) {
+    .container{
+        font-size: 13px;
+    }
+
+    .proceedBack button{
+        font-size: 12px;
+        margin: 0px 3px;
+        padding: 10px 6px;
+    }
+}
+
+@media screen and (max-width:599px) {
+    .containerRIght{
+        font-size: 11px;
+    }
+
+    .proceedBack button{
+        font-size: 11px;
+        margin: 0px 2px;
+        padding: 10px 6px;
+    }
+
+}
+
+@media screen and (max-width:509px) {
+    .container{
+        font-size: 10px;
+    }
+
+    .proceedBack button{
+        padding: 10px 6px;
+    }
+}
 
 
