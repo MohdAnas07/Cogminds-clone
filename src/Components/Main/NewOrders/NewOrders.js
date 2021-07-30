@@ -32,10 +32,11 @@ const NewOrders = () => {
     const [leftPosition, setLeftPosition] = useState(null)
 
     const [isPrint, setIsPrint] = useState('printed')
-
+    const [printName, setPrintName] = useState('no design')
 
     const handleImage = (e) => {
         setPrintImg(URL.createObjectURL(e.target.files[0]))
+        setPrintName(e.target.files[0].name)
     }
 
     return (
@@ -152,7 +153,7 @@ const NewOrders = () => {
 
                                     <div className={CSS.chooseFile}>
                                         <input type="file" />
-                                        <p>Upload Design</p>
+                                        <p> {printName} </p>
                                     </div>
 
                                     <img className={CSS.DeleteImg} src={deleteImg} alt="" onClick={() => { setPrintImg(null) }} />
