@@ -31,14 +31,12 @@ const NewOrders = () => {
     const [topPosition, setTopPosition] = useState(null)
     const [leftPosition, setLeftPosition] = useState(null)
 
-    const [isPrint, setIsPrint] = useState(null)
+    const [isPrint, setIsPrint] = useState('printed')
 
-    // Alignments State 
 
     const handleImage = (e) => {
         setPrintImg(URL.createObjectURL(e.target.files[0]))
     }
-
 
     return (
         <div className={CSS.orders}>
@@ -136,12 +134,12 @@ const NewOrders = () => {
 
                             <div className={CSS.TshirtType}>
 
-                                <input type="radio" checked name="key" value="plain" onClick={(e) => {
-                                    setIsPrint(e.target.value.toString())
+                                <input type="radio" name="key" value="plain" onClick={(e) => {
+                                    setIsPrint(null)
                                 }} />
                                 <label for="plain">Plain</label>
 
-                                <input type="radio" name="key" value="printed" onClick={(e) => {
+                                <input type="radio" checked name="key" value="printed" onClick={(e) => {
                                     setIsPrint(e.target.value.toString())
                                 }} />
                                 <label for="printed">Printed</label>
