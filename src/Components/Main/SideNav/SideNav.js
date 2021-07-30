@@ -35,7 +35,7 @@ const SideNav = () => {
         <div onMouseOver={hoverIn} onMouseOut={hoverOut} style={showSlide} className='side-var'>
             <div className='company-logo'>
                 <img src={Logo} alt="company logo" id='logo' />
-                <p onClick={() => setShowSlide({ width: '75px' })}>X</p>
+                <p onClick={hoverOut}>X</p>
             </div >
 
             <>

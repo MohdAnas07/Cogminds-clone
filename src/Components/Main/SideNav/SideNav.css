@@ -12,6 +12,7 @@
     z-index: 500px;
     transform-origin:left;
     border-radius: 0px 13px 13px 0px;
+    overflow-y: auto;
     white-space: nowrap !important;
 }
 

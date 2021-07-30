@@ -748,4 +748,49 @@ h2>span{
     }
 }
 
+@media screen and (max-width:485px) {
+    .ordersContainer{
+        width: 77vw;
+        margin: 15px 0px 10px 64px;
+    }
+
+    .container{
+        padding: 25px 0px;
+    }
+    .designWidth, .designPosition, .designAginment{
+        flex-direction: column;
+    }
+    .designWidth p, .designPosition p, .designAginment p{
+        font-size: 15px;
+    }
+
+    .buttons{
+        flex-direction: column;
+    }
+    .uploads{
+        padding: 10px 0px;
+    }
+
+    .uploadBtn{
+        padding: 2px 40px;
+        font-size: 14px;
+    }
+    .uploadBtn img{
+        height: 14px;
+    }
+
+    .proceedBack button{
+        padding: 14px 30px;
+        font-size: 14px;
+    }
+
+    .sizeInputBox{
+        padding: 12px 3px;
+    }
+
+
+}
+
+
+
 
