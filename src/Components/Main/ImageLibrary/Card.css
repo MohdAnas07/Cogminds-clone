@@ -75,3 +75,13 @@
 }
 
 
+
+@media screen and (max-width: 396px) {
+    .card-container{
+        width: 250px;
+    }
+    .card-container img{
+        width: 250px;
+        height: 250px;
+    }
+  }

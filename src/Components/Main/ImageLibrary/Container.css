@@ -167,9 +167,12 @@
   }
 
 
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 396px) {
     .container-img{
         justify-content: center;
+    }
+    .container-img{
+        grid-template-columns: repeat(1,250px);
+      
     }
   }
