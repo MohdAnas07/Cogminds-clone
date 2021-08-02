@@ -423,6 +423,7 @@ h2>span {
     height: 90%;
     margin-top: 0;
     margin-left: 0;
+    border-radius: 10px;
 }
 
 
@@ -602,12 +603,13 @@ h2>span {
 
 }
 
-@media screen and (max-width:1001px) {
+@media (max-width:1001px) {
 
     .ordersContainer {
         width: 90%;
         margin: 20px 0px;
     }
+
 }
 
 @media screen and (max-width:500px) {

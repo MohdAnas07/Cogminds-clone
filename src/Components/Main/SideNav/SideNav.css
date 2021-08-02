@@ -158,3 +158,9 @@ img:hover {
     border-top-right-radius: 20px;
     background: #00273e;
 }
+
+@media (min-width:1001px) {
+    .cross {
+        visibility: hidden;
+    }
+}

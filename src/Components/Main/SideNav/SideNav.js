@@ -46,18 +46,24 @@ const SideNav = ({ toggle, setToggle }) => {
             setTransform({ transform: 'scale(0)' })
             setMarginLeft({ marginLeft: '5px' })
         }
+    }
 
+    const menu = () => {
+        if (isTabletOrMobile) {
+            setShowSlide({ width: '0px' })
+        }
         setToggle((p) => !p)
     }
+
 
     return (
         <>
 
-            {toggle ? ("") : (< div onMouseOver={hoverIn} style={showSlide} className='side-var' >
+            {toggle ? ("") : (< div onMouseOver={hoverIn} style={showSlide} onMouseOut={hoverOut} className='side-var' >
 
                 <div className='company-logo'>
                     <img src={Logo} alt="company logo" id='logo' />
-                    <p onClick={hoverOut} >X</p>
+                    <p onClick={menu} className='cross' >X</p>
                 </div >
 
                 <>
