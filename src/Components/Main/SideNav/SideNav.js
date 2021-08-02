@@ -24,13 +24,10 @@ const SideNav = ({ toggle, setToggle }) => {
 
     const isTabletOrMobile = useMediaQuery({ query: "(min-width: 1001px)" });
 
-    const isPhone = useMediaQuery({ query: "(man-width: 1000px)" });
+    // const [shownav, setShownav] = useState(false)
 
     if (isTabletOrMobile) {
         setToggle(false);
-    }
-    if (isPhone) {
-        setToggle(true);
     }
 
     const hoverIn = () => {
@@ -55,11 +52,12 @@ const SideNav = ({ toggle, setToggle }) => {
         setToggle((p) => !p)
     }
 
-
     return (
         <>
-
-            {toggle ? ("") : (< div onMouseOver={hoverIn} style={showSlide} onMouseOut={hoverOut} className='side-var' >
+            {toggle ? ("") : (< div onMouseOver={hoverIn}
+                style={showSlide}
+                onMouseOut={hoverOut}
+                onClick={hoverIn} className='side-var'  >
 
                 <div className='company-logo'>
                     <img src={Logo} alt="company logo" id='logo' />

@@ -44,12 +44,15 @@ const NewOrders = () => {
 
     const [isPrint, setIsPrint] = useState('printed')
     const [printName, setPrintName] = useState('no design')
+    const [size, setSize] = useState(null)
 
 
     const handleImage = (e) => {
         setPrintImg(URL.createObjectURL(e.target.files[0]))
         setPrintName(e.target.files[0].name)
     }
+
+
 
     return (
         <div data-aos="fade-up" className={CSS.orders}>
@@ -119,14 +122,38 @@ const NewOrders = () => {
                                 </div>
 
                                 <div className={CSS.sizeBox}>
-                                    <div className={`${CSS.box}`}>S</div>
-                                    <div className={`${CSS.box} `}>L</div>
-                                    <div className={`${CSS.box} `}>M</div>
-                                    <div className={`${CSS.box} `}>XL</div>
-                                    <div className={`${CSS.box} `}>2XL</div>
-                                    <div className={`${CSS.box} `}>3XL</div>
-                                    <div className={`${CSS.box} `}>4XL</div>
-                                    <div className={`${CSS.box} `}>5XL</div>
+                                    <div style={size === 'S' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box}`}
+                                        onClick={() => {
+                                            setSize('S')
+                                        }} >S</div>
+                                    <div style={size === 'M' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setSize('M')
+                                        }} >M</div>
+                                    <div style={size === 'L' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setSize('L')
+                                        }} >L</div>
+                                    <div style={size === 'XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setSize('XL')
+                                        }} >XL</div>
+                                    <div style={size === '2XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setSize('2XL')
+                                        }} >2XL</div>
+                                    <div style={size === '3XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setSize('3XL')
+                                        }} >3XL</div>
+                                    <div style={size === '4XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setSize('4XL')
+                                        }} >4XL</div>
+                                    <div style={size === '5XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                        onClick={() => {
+                                            setSize('5XL')
+                                        }} >5XL</div>
                                 </div>
                             </div>
 

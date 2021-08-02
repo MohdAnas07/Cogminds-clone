@@ -410,6 +410,11 @@ h2>span {
     width: 153px;
     padding: 10px;
     box-sizing: border-box;
+    top: 20%;
+    left: 32%;
+    height: 40%;
+    width: 34%;
+    overflow: hidden;
 }
 
 .tshirtImage img {

@@ -159,8 +159,18 @@ img:hover {
     background: #00273e;
 }
 
+@media (max-width:1001px) {
+    .side-var {}
+
+}
+
 @media (min-width:1001px) {
     .cross {
         visibility: hidden;
     }
+
+    .side-var {
+        display: block;
+    }
+
 }
