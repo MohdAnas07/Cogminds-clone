@@ -1,4 +1,4 @@
-.side-var{
+.side-var {
     position: absolute;
     top: 0;
     z-index: 2000;
@@ -10,40 +10,41 @@
     top: 0;
     transition: all 200ms linear;
     z-index: 500px;
-    transform-origin:left;
+    transform-origin: left;
     border-radius: 0px 13px 13px 0px;
     overflow-y: auto;
     white-space: nowrap !important;
 }
 
 .side-var:hover {
-    width: 288px;
+    width: 255px;
 }
 
-.company-logo{
-    width: 288px;
+.company-logo {
+    width: 255px;
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.company-logo p{
-    margin-left: 35px;
+.company-logo p {
+    /* margin-left: 35px; */
     padding-bottom: 20px;
     color: white;
     cursor: pointer;
     transition: all 1s linear;
     font-size: 25px;
+    width: 10%;
+    padding: 0px 10px 24px 10px;
 }
 
-
-.company-logo p:hover{
+.company-logo p:hover {
     color: #f97316;
 }
 
-.company-logo img{
-    width: 175px;
+.company-logo img {
+    width: 70%;
     height: 78px;
     margin: 2rem 1rem;
 }
@@ -51,7 +52,7 @@
 
 /* ListItems  CSS--------------------------------- */
 
-.listItem{
+.listItem {
     display: flex;
     align-items: center;
     color: white;
@@ -64,19 +65,19 @@
     transition: all 100ms linear;
 }
 
-.listItem:hover{
+.listItem:hover {
     color: #fc6101;
 }
 
-img:hover{
-color: #f97316;
+img:hover {
+    color: #f97316;
 }
 
-.listItem *{
+.listItem * {
     cursor: pointer;
 }
 
-.listItem p{
+.listItem p {
     -webkit-transform-origin: left;
     margin-left: 10px;
     font-weight: 700;
@@ -90,16 +91,16 @@ color: #f97316;
 }
 
 
-.listItem p:hover{
+.listItem p:hover {
     transform: scale(1);
 }
 
-.activeLink{
+.activeLink {
     background-color: white;
     color: #00273e;
 }
 
-.activeLink b{
+.activeLink b {
     visibility: visible;
 }
 
@@ -107,17 +108,17 @@ color: #f97316;
     width: 0;
 }
 
-.Icon{
+.Icon {
     width: 20px;
     height: 20px;
     margin: 0px 10px 0 24px;
 }
 
-.listItem svg{
+.listItem svg {
     width: 20px;
 }
 
-.uperBox{
+.uperBox {
     width: 10px;
     height: 10px;
     width: 100%;
@@ -129,7 +130,7 @@ color: #f97316;
     visibility: hidden;
 }
 
-.uperBox::before{
+.uperBox::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -139,7 +140,7 @@ color: #f97316;
 }
 
 
-.lowerBox{
+.lowerBox {
     width: 100%;
     position: absolute;
     height: 20px;
@@ -149,7 +150,7 @@ color: #f97316;
     visibility: hidden;
 }
 
-.lowerBox::before{
+.lowerBox::before {
     content: "";
     position: absolute;
     width: 100%;

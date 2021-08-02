@@ -1,7 +1,12 @@
-:after, :before,body {
+:after,
+:before,
+body {
   box-sizing: border-box;
-  font-family: Montserrat,sans-serif!important;
+  font-family: Montserrat, sans-serif !important;
   margin: 0;
   padding: 0;
 }
 
+* {
+  /* overflow-y: hidden; */
+}

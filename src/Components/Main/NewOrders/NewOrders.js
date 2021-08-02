@@ -1,15 +1,16 @@
-import React, { useState, memo } from 'react'
+import React, { useState, memo, useEffect } from 'react'
 import CSS from './NewOrder.module.css'
-// import image from "../../assest/angryBird1.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import image from '../../assests/angryBird2.png'
 import image1 from '../../assests/image.png'
 import deleteImg from '../../assests/DeleteImg.png'
-import align1 from '../../assests/align1.svg'
-import align2 from '../../assests/align2.svg'
-import align3 from '../../assests/align3.svg'
-import align4 from '../../assests/align4.svg'
-import align5 from '../../assests/align5.svg'
-import align6 from '../../assests/align6.svg'
+import alignH from '../../assests/align1.svg'
+import alignV from '../../assests/align2.svg'
+import alignL from '../../assests/align3.svg'
+import alignR from '../../assests/align4.svg'
+import alignU from '../../assests/align5.svg'
+import alignD from '../../assests/align6.svg'
 import Tshirt from '../../assests/tshirt.svg'
 import BTshirt from '../../assests/BackTshirt.png'
 import SleevImg from '../../assests/SleeveImg.png'
@@ -17,6 +18,13 @@ import SleevImg from '../../assests/SleeveImg.png'
 import Arrow from '../../assests/arrow.svg'
 
 const NewOrders = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            offset: 130
+        })
+    }, [])
+
     const [front, setFront] = useState(true)
     const [back, setBack] = useState(false)
     const [sleev, setSleev] = useState(false)
@@ -25,14 +33,18 @@ const NewOrders = () => {
     const [tSize, setTSize] = useState(null)
 
     const [printImg, setPrintImg] = useState(null)
-
-    const [widthsize, setWidthSize] = useState(null)
+    const [widthSize, setWidthSize] = useState(null)
     const [heightSize, setHeightSize] = useState(null)
     const [topPosition, setTopPosition] = useState(null)
     const [leftPosition, setLeftPosition] = useState(null)
 
+    const [alignmentV, setAlignmentV] = useState(0)
+    const [alignmentH, setAlignmentH] = useState(0)
+
+
     const [isPrint, setIsPrint] = useState('printed')
     const [printName, setPrintName] = useState('no design')
+
 
     const handleImage = (e) => {
         setPrintImg(URL.createObjectURL(e.target.files[0]))
@@ -40,7 +52,7 @@ const NewOrders = () => {
     }
 
     return (
-        <div className={CSS.orders}>
+        <div data-aos="fade-up" className={CSS.orders}>
 
             <div className={CSS.ordersContainer}>
                 <div className={CSS.uperBorder}>
@@ -105,29 +117,16 @@ const NewOrders = () => {
                                     <p>Size:</p>
                                     <a href=''>Show Size Guide</a>
                                 </div>
+
                                 <div className={CSS.sizeBox}>
-                                    <div className={`${CSS.box}`}
-                                    >S</div>
-                                    <div className={`${CSS.box} `}
-                                    >L</div>
-
-                                    <div className={`${CSS.box} `}
-                                    >M</div>
-
-                                    <div className={`${CSS.box} `}
-                                    >XL</div>
-
-                                    <div className={`${CSS.box} `}
-                                    >2XL</div>
-
-                                    <div className={`${CSS.box} `}
-                                    >3XL</div>
-
-                                    <div className={`${CSS.box} `}
-                                    >4XL</div>
-
-                                    <div className={`${CSS.box} `}
-                                    >5XL</div>
+                                    <div className={`${CSS.box}`}>S</div>
+                                    <div className={`${CSS.box} `}>L</div>
+                                    <div className={`${CSS.box} `}>M</div>
+                                    <div className={`${CSS.box} `}>XL</div>
+                                    <div className={`${CSS.box} `}>2XL</div>
+                                    <div className={`${CSS.box} `}>3XL</div>
+                                    <div className={`${CSS.box} `}>4XL</div>
+                                    <div className={`${CSS.box} `}>5XL</div>
                                 </div>
                             </div>
 
@@ -167,7 +166,7 @@ const NewOrders = () => {
                                             <p>Width</p>
                                             <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let width = e.target.value
-                                                setWidthSize({ width: `${width}px` })
+                                                setWidthSize(width)
                                             }} />
                                             <span>Px</span>
                                         </div>
@@ -175,7 +174,7 @@ const NewOrders = () => {
                                             <p>Height</p>
                                             <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let height = e.target.value
-                                                setHeightSize({ height: `${height}px` })
+                                                setHeightSize(height)
                                             }} />
                                             <span>Px</span>
                                         </div>
@@ -189,7 +188,7 @@ const NewOrders = () => {
                                             <p>Top</p>
                                             <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let position = e.target.value
-                                                setTopPosition({ 'margin-bottom': `${position}px` })
+                                                setTopPosition(position)
                                             }} />
                                             <span>Px</span>
                                         </div>
@@ -197,8 +196,7 @@ const NewOrders = () => {
                                             <p>Left</p>
                                             <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let position = e.target.value
-                                                setLeftPosition({ 'margin-right': `${position}px` })
-
+                                                setLeftPosition(position)
                                             }} />
                                             <span>Px</span>
                                         </div>
@@ -208,13 +206,23 @@ const NewOrders = () => {
                                 <div className={CSS.designAginment}>
                                     <p>Alignment</p>
                                     <div className={CSS.alignmentImage}>
-                                        <img src={align1} alt="" />
-                                        <img src={align2} alt="" />
-                                        <img src={align3} alt="" />
-                                        <img src={align4} alt="" />
-                                        <img src={align5} alt="" />
-                                        <img src={align6} alt="" onClick={() => {
-                                            setTopPosition(topPosition)
+                                        <img src={alignH} alt="" onClick={() => {
+                                            setAlignmentH(alignmentH + 1)
+                                        }} />
+                                        <img src={alignV} alt="" onClick={() => {
+                                            setAlignmentV(alignmentV + 1)
+                                        }} />
+                                        <img src={alignL} alt="" onClick={() => {
+                                            setLeftPosition(leftPosition + 1)
+                                        }} />
+                                        <img src={alignR} alt="" onClick={() => {
+                                            setLeftPosition(leftPosition - 1)
+                                        }} />
+                                        <img src={alignU} alt="" onClick={() => {
+                                            setTopPosition(topPosition + 1)
+                                        }} />
+                                        <img src={alignD} alt="" onClick={() => {
+                                            setTopPosition(topPosition - 1)
                                         }} />
                                     </div>
                                 </div>
@@ -256,8 +264,12 @@ const NewOrders = () => {
                                 {print && <div className={CSS.print}>
                                     <img className={CSS.printImg}
                                         style={{
-                                            ...widthsize, ...heightSize,
-                                            ...topPosition, ...leftPosition
+                                            width: `${widthSize}px`, height: `${heightSize}px`,
+                                            'margin-bottom': `${topPosition}px`,
+                                            'margin-right': `${leftPosition}px`,
+                                            'padding': `${alignmentV}px ${alignmentH}px`,
+
+
                                         }}
                                         src={printImg} alt="" /></div>}
                             </div>
@@ -291,6 +303,5 @@ const NewOrders = () => {
         </div >
     )
 }
-
 
 export default NewOrders

@@ -8,39 +8,23 @@ import Billing from './Billing/Billing'
 import Setting from './Setting/Setting'
 
 import Header from './Header/Header'
-import SideNav from './SideNav/SideNav'
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
+const Main = ({ toggle, setToggle }) => {
 
-const Main = () => {
+    console.log(setToggle);
     return (
         <div className='main'>
-            <SideNav />
-            <Header />
+            <Header toggle={toggle} setToggle={setToggle} />
+
             <Switch>
-                <Route exact path='/'>
-                    <DashBoard />
-                </Route>
-                <Route path='/imagelibrary'>
-                    <ImageLibrary />
-                </Route>
-                <Route path='/neworder'>
-                    <NewOrders />
-                </Route>
-                <Route path='/manageorder'>
-                    <ManageOrder />
-                </Route>
-                <Route path='/billing'>
-                    <Billing />
-                </Route>
-                <Route path='/setting'>
-                    <Setting />
-                </Route>
+                <Route exact path='/' component={DashBoard} />
+                <Route path='/imagelibrary' component={ImageLibrary} />
+                <Route path='/neworder' component={NewOrders} />
+                <Route path='/manageorder' component={ManageOrder} />
+                <Route path='/billing' component={Billing} />
+                <Route path='/setting' component={Setting} />
             </Switch>
         </div >
     )
