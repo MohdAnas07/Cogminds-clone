@@ -130,6 +130,7 @@
 
     .right-container-header {
         justify-content: space-between;
+        padding-right: 3px;
     }
 }
 
@@ -140,13 +141,14 @@
 
     .right-container-header {
         justify-content: space-between;
+        padding-right: 8px;
     }
 }
 
 
 @media screen and (max-width: 891px) {
     .right-container-header {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: flex-start;
     }
 
@@ -184,10 +186,10 @@
     }
 
     .right-container-header {
+        flex-direction: column;
         align-items: center;
     }
 }
-
 
 @media screen and (max-width: 396px) {
     .container-img {
