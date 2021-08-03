@@ -10,7 +10,6 @@ import Modal from "@material-ui/core/Modal";
 
 function getModalStyle() {
 
-
     return {
         top: `50%`,
         left: `50%`,
@@ -37,6 +36,7 @@ const Card = ({ img }) => {
     const handleClose = () => {
         setOpen(false);
     };
+
     const changeHandler = (field, newValue) => {
         setImagesall((prev) => {
             const old = { ...prev };
@@ -48,7 +48,7 @@ const Card = ({ img }) => {
     const useStyles = makeStyles((theme) => ({
         paper: {
             position: "absolute",
-            width: 450,
+            // width: 450,
             backgroundColor: theme.palette.background.paper,
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
@@ -87,12 +87,12 @@ const Card = ({ img }) => {
                 aria-describedby="simple-modal-description"
             >
                 <div style={modalStyle} className={classes.paper}>
-                    <h2 id="simple-modal-title">{img[1]}</h2>
+                    <h2 style={{ 'text-align': 'center' }} id="simple-modal-title">{img[1]}</h2>
                     <p id="simple-modal-description">
-                        <img
+                        <img className='popupImg'
                             src={img[0]}
                             alt={img[1]}
-                            style={{ height: 450, width: 450, borderRadius: "20px" }}
+                            style={{ borderRadius: "20px" }}
                         />
                     </p>
                 </div>
