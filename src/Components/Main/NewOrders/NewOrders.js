@@ -35,8 +35,8 @@ const NewOrders = () => {
     const [printImg, setPrintImg] = useState(null)
     const [widthSize, setWidthSize] = useState(null)
     const [heightSize, setHeightSize] = useState(null)
-    const [topPosition, setTopPosition] = useState(null)
-    const [leftPosition, setLeftPosition] = useState(null)
+    const [topPosition, setTopPosition] = useState(0)
+    const [leftPosition, setLeftPosition] = useState(0)
 
     const [alignmentV, setAlignmentV] = useState(0)
     const [alignmentH, setAlignmentH] = useState(0)
@@ -217,17 +217,18 @@ const NewOrders = () => {
                                             <p>Width</p>
                                             <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let width = e.target.value
-                                                setWidthSize(width)
+                                                setWidthSize(width * 50)
                                             }} />
-                                            <span>Px</span>
+                                            <span>In</span>
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Height</p>
-                                            <input type="number" placeholder='15.7' onChange={(e) => {
-                                                let height = e.target.value
-                                                setHeightSize(height)
-                                            }} />
-                                            <span>Px</span>
+                                            <input type="number" placeholder='15.7'
+                                                onChange={(e) => {
+                                                    let height = e.target.value
+                                                    setHeightSize(height * 50)
+                                                }} />
+                                            <span>In</span>
                                         </div>
                                     </div>
                                 </div>
@@ -239,17 +240,17 @@ const NewOrders = () => {
                                             <p>Top</p>
                                             <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let position = e.target.value
-                                                setTopPosition(position)
+                                                setTopPosition(position * 30)
                                             }} />
-                                            <span>Px</span>
+                                            <span>In</span>
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Left</p>
                                             <input type="number" placeholder='15.7' onChange={(e) => {
                                                 let position = e.target.value
-                                                setLeftPosition(position)
+                                                setLeftPosition(position * 30)
                                             }} />
-                                            <span>Px</span>
+                                            <span>In</span>
                                         </div>
                                     </div>
                                 </div>
@@ -258,22 +259,22 @@ const NewOrders = () => {
                                     <p>Alignment</p>
                                     <div className={CSS.alignmentImage}>
                                         <img src={alignH} alt="" onClick={() => {
-                                            setAlignmentH(alignmentH + 1)
+                                            setAlignmentH(alignmentH + 5)
                                         }} />
                                         <img src={alignV} alt="" onClick={() => {
-                                            setAlignmentV(alignmentV + 1)
+                                            setAlignmentV(alignmentV + 5)
                                         }} />
                                         <img src={alignL} alt="" onClick={() => {
-                                            setLeftPosition(leftPosition + 1)
+                                            setLeftPosition(leftPosition + 5)
                                         }} />
                                         <img src={alignR} alt="" onClick={() => {
-                                            setLeftPosition(leftPosition - 1)
+                                            setLeftPosition(leftPosition - 5)
                                         }} />
                                         <img src={alignU} alt="" onClick={() => {
-                                            setTopPosition(topPosition + 1)
+                                            setTopPosition(topPosition + 5)
                                         }} />
                                         <img src={alignD} alt="" onClick={() => {
-                                            setTopPosition(topPosition - 1)
+                                            setTopPosition(topPosition - 5)
                                         }} />
                                     </div>
                                 </div>
@@ -319,7 +320,6 @@ const NewOrders = () => {
                                             'margin-bottom': `${topPosition}px`,
                                             'margin-right': `${leftPosition}px`,
                                             'padding': `${alignmentV}px ${alignmentH}px`,
-
 
                                         }}
                                         src={printImg} alt="" /></div>}
