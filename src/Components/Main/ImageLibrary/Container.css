@@ -127,6 +127,10 @@
         flex-direction: column;
         justify-content: left;
     }
+
+    .right-container-header {
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width:1000px) {
