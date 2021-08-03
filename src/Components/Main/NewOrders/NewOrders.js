@@ -14,7 +14,6 @@ import alignD from '../../assests/align6.svg'
 import Tshirt from '../../assests/tshirt.svg'
 import BTshirt from '../../assests/BackTshirt.png'
 import SleevImg from '../../assests/SleeveImg.png'
-// import SleevImg from '../../assests/fullSleeve2.svg'
 import Arrow from '../../assests/arrow.svg'
 
 const NewOrders = () => {
@@ -215,7 +214,7 @@ const NewOrders = () => {
                                     <div className={CSS.size}>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Width</p>
-                                            <input type="number" placeholder='15.7' onChange={(e) => {
+                                            <input type="number" placeholder='2.4' onChange={(e) => {
                                                 let width = e.target.value
                                                 setWidthSize(width * 50)
                                             }} />
@@ -223,7 +222,7 @@ const NewOrders = () => {
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Height</p>
-                                            <input type="number" placeholder='15.7'
+                                            <input type="number" placeholder='3.2'
                                                 onChange={(e) => {
                                                     let height = e.target.value
                                                     setHeightSize(height * 50)
@@ -238,18 +237,20 @@ const NewOrders = () => {
                                     <div className={CSS.size}>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Top</p>
-                                            <input type="number" placeholder='15.7' onChange={(e) => {
-                                                let position = e.target.value
-                                                setTopPosition(position * 30)
-                                            }} />
+                                            <input type="number" placeholder='0'
+                                                onChange={(e) => {
+                                                    let position = e.target.value
+                                                    setTopPosition(position * 30)
+                                                }} />
                                             <span>In</span>
                                         </div>
                                         <div className={CSS.sizeInputBox}>
                                             <p>Left</p>
-                                            <input type="number" placeholder='15.7' onChange={(e) => {
-                                                let position = e.target.value
-                                                setLeftPosition(position * 30)
-                                            }} />
+                                            <input type="number" placeholder='0'
+                                                onChange={(e) => {
+                                                    let position = e.target.value
+                                                    setLeftPosition(position * 30)
+                                                }} />
                                             <span>In</span>
                                         </div>
                                     </div>
