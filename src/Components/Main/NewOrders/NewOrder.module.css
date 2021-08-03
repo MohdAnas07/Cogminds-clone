@@ -608,6 +608,13 @@ h2>span {
 
 }
 
+@media (max-width:1033px) {
+    .buttons {
+        padding: 0 5%;
+    }
+}
+
+
 @media (max-width:1001px) {
 
     .ordersContainer {
@@ -633,7 +640,7 @@ h2>span {
     }
 
     .containerLeft {
-        width: 70%;
+        width: 90%;
     }
 
     .containerLeft {
@@ -641,7 +648,7 @@ h2>span {
     }
 
     .containerRIght {
-        width: 70%;
+        width: 90%;
     }
 
     .shirtPosition p {
@@ -698,11 +705,11 @@ h2>span {
 
 @media screen and (max-width:850px) {
     .containerLeft {
-        width: 80%;
+        width: 90%;
     }
 
     .containerRIght {
-        width: 80%;
+        width: 90%;
     }
 
     .uploadBtn {
