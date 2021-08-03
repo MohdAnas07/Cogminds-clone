@@ -122,35 +122,59 @@ const NewOrders = () => {
                                 </div>
 
                                 <div className={CSS.sizeBox}>
-                                    <div style={size === 'S' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box}`}
+                                    <div style={size === 'S' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box}`}
                                         onClick={() => {
                                             setSize('S')
                                         }} >S</div>
-                                    <div style={size === 'M' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                    <div style={size === 'M' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box} `}
                                         onClick={() => {
                                             setSize('M')
                                         }} >M</div>
-                                    <div style={size === 'L' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                    <div style={size === 'L' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box} `}
                                         onClick={() => {
                                             setSize('L')
                                         }} >L</div>
-                                    <div style={size === 'XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                    <div style={size === 'XL' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box} `}
                                         onClick={() => {
                                             setSize('XL')
                                         }} >XL</div>
-                                    <div style={size === '2XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                    <div style={size === '2XL' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box} `}
                                         onClick={() => {
                                             setSize('2XL')
                                         }} >2XL</div>
-                                    <div style={size === '3XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                    <div style={size === '3XL' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box} `}
                                         onClick={() => {
                                             setSize('3XL')
                                         }} >3XL</div>
-                                    <div style={size === '4XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                    <div style={size === '4XL' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box} `}
                                         onClick={() => {
                                             setSize('4XL')
                                         }} >4XL</div>
-                                    <div style={size === '5XL' ? { 'font-weigth': 'bold' } : { 'font-weigth': '100' }} className={`${CSS.box} `}
+                                    <div style={size === '5XL' ? {
+                                        'font-weight': 'bold',
+                                        'border': '2px solid'
+                                    } : { 'font-weight': '100' }} className={`${CSS.box} `}
                                         onClick={() => {
                                             setSize('5XL')
                                         }} >5XL</div>
