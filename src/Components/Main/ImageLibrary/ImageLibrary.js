@@ -24,7 +24,7 @@ const Container = () => {
                     <h1>IMAGE LIBRARY</h1>
                 </div>
                 <div className="right-container-header">
-                    <a href="#">Important guidelines to read before uploading</a>
+                    <p>Important guidelines to read before uploading</p>
                     <button htmlFor="upload" className='upload-btn'>
                         <input type="file" id="upload" />
                         <img src={image} alt="" />

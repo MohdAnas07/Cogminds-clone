@@ -159,6 +159,10 @@
         width: 250px;
     }
 
+    .card {
+        height: 79%;
+    }
+
     .card-container img {
         width: 250px;
         height: 250px;

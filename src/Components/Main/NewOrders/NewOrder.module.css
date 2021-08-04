@@ -90,7 +90,7 @@ h2>span {
 
 .sizeInnerDiv {
     display: flex;
-    width: 62%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -404,10 +404,10 @@ h2>span {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 120px;
-    left: 146px;
-    height: 180px;
-    width: 153px;
+    top: 22%;
+    left: 32%;
+    height: 40%;
+    width: 34%;
     padding: 10px;
     box-sizing: border-box;
     top: 20%;
@@ -504,13 +504,6 @@ h2>span {
         width: 31%;
     }
 
-    .print {
-        top: 18%;
-        left: 32%;
-        height: 40%;
-        width: 35%;
-    }
-
 }
 
 
@@ -541,13 +534,6 @@ h2>span {
         width: 40%;
     }
 
-    .print {
-        top: 83px;
-        left: 137px;
-        height: 191px;
-        width: 153px;
-    }
-
 }
 
 
@@ -559,13 +545,6 @@ h2>span {
     .tshirtImage img {
         width: 390px;
         height: 400px;
-    }
-
-    .print {
-        top: 86px;
-        left: 117px;
-        height: 188px;
-        width: 153px;
     }
 
     .print img {
@@ -591,13 +570,6 @@ h2>span {
     .tshirtImage img {
         width: 356px;
         height: 370px;
-    }
-
-    .print {
-        top: 68px;
-        left: 104px;
-        height: 163px;
-        width: 145px;
     }
 
     .print img {
@@ -664,13 +636,6 @@ h2>span {
     .tshirtImage img {
         width: 100%;
         height: 80%;
-    }
-
-    .print {
-        top: 10%;
-        left: 32%;
-        height: 40%;
-        width: 34%;
     }
 
     .proceedBack {

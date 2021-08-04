@@ -232,3 +232,22 @@
         font-size: 13px;
     }
 }
+
+@media (max-width:355px) {
+    .cash {
+        display: none;
+    }
+
+    .left-nav {
+        width: 53vw;
+    }
+}
+
+
+
+@media screen and (max-width: 280px) {
+
+    .left-nav {
+        width: 44vw;
+    }
+}
