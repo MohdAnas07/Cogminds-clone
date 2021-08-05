@@ -55,11 +55,11 @@ const NewOrders = () => {
             const imgExt = imgName.substring(imgName.lastIndexOf('.') + 1)
 
             if (!validExt.includes(imgExt)) {
-                toast.error('Please select only image', { position: "top-center" });
+                toast.error('Please select only image', { position: "top-center", hideProgressBar: true, });
                 setPrintImg(null)
                 setPrintName('no design')
             } else {
-                toast.success('Image Uploaded', { position: "top-center" });
+                toast.success('Image Uploaded', { position: "top-center", hideProgressBar: true, });
                 setPrintImg(URL.createObjectURL(e.target.files[0]))
                 setPrintName(imgName);
             }
