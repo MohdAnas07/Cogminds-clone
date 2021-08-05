@@ -2,6 +2,8 @@ import React, { useState, memo, useEffect } from 'react'
 import CSS from './NewOrder.module.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import image from '../../assests/angryBird2.png'
 import image1 from '../../assests/image.png'
 import deleteImg from '../../assests/DeleteImg.png'
@@ -45,13 +47,26 @@ const NewOrders = () => {
     const [printName, setPrintName] = useState('no design')
     const [size, setSize] = useState(null)
 
+    const validExt = ['jpeg', 'png', 'jpg']
 
     const handleImage = (e) => {
-        setPrintImg(URL.createObjectURL(e.target.files[0]))
-        setPrintName(e.target.files[0].name)
+        if (e.target.value !== '') {
+            const imgName = e.target.files[0].name
+            const imgExt = imgName.substring(imgName.lastIndexOf('.') + 1)
+
+            if (!validExt.includes(imgExt)) {
+                toast.error('Please select only image', { position: "top-center" });
+                setPrintImg(null)
+                setPrintName('no design')
+            } else {
+                toast.success('Image Uploaded', { position: "top-center" });
+                setPrintImg(URL.createObjectURL(e.target.files[0]))
+                setPrintName(imgName);
+            }
+        } else {
+            alert('No Image is Selected....')
+        }
     }
-
-
 
     return (
         <div data-aos="fade-up" className={CSS.orders}>
@@ -205,7 +220,10 @@ const NewOrders = () => {
                                         <p> {printName} </p>
                                     </div>
 
-                                    <img className={CSS.DeleteImg} src={deleteImg} alt="" onClick={() => { setPrintImg(null) }} />
+                                    <img className={CSS.DeleteImg} src={deleteImg} alt="" onClick={() => {
+                                        setPrintImg(null)
+                                        setPrintName('no design')
+                                    }} />
 
                                 </div>
 
@@ -352,6 +370,7 @@ const NewOrders = () => {
 
             </div>
 
+            <ToastContainer />
         </div >
     )
 }
